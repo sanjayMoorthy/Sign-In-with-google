@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+:root {
+    --primary-color: #223F64;
+    --secondary-color: #3F88D8;
+    --text-color-1: #25384F;
+    --text-color-2: #96969C;
+    --text-color-3: #FF0000;
+    --background-color: #F4F7FA;
+}
+
+/* chenges */
+.loginPage {
+    display: flex;
+    justify-content: space-around;
+}
+
+.formContainer {
+    text-align: center;
+    width: auto;
+}
+
+.imageContainer {
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+
+.inputcontainer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.formBox {
+    /* padding: 25px; */
+    padding-bottom: 30px;
+    width: 400px;
+    margin-top: 30px;
+    height: auto;
+    top: 164px;
+    left: 763px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px 0px #0000004D;
+}
+
+input {
+    width: 300px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-colour, #3F88D8);
+    background: #FFF;
+    padding-left: 10px;
+    outline: none;
+    font-size: inherit;
+}
+input:hover{
+    box-shadow: 0px 0px 10px 0px var(--secondary-color);
+}
+.signUptext {
+    color: var(--primary-colour, #223F64);
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+    padding: 8px;
+}
+
+.signupButton {
+    width: 300px;
+    height: 45px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: var(--primary-colour, #223F64);
+    color: #FFF;
+    border: 1px solid var(--secondary-colour, #3F88D8);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: 0;
+
+}
+.signupButton:hover{
+    /* background-color:var(--text-color-1) ; */
+    box-shadow: 0px 5px 9px 0px var(--primary-color);
+    border: 0;
+    transition:0.5s;
+}
+.signUpoption {
+    display: flex;
+    margin-top: 20px;
+}
+.signUpoption p {
+    color: rgb(31, 31, 31);
+}
+
+.dummy {
+    margin-top: 11px;
+    margin: auto;
+    width: 155px;
+    height: 1px;
+    background: #e2e2e2;
+}
+
+.accountRedirct {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #3F88D8;
+}
+
+.signupWithgoogle {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-colour, #3F88D8);
+    background: #FFF;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+/* .signupWithgoogle:hover{
+    background: #F4F7FA;
+} */
+.signupWithgoogle:active {
+    background-color: #c2e0ff;
+    /* box-shadow: 0 1px #666; */
+    transform: translateY(2px);
+}
+
+.heading {
+    font-weight: 400;
+    color: var(--text-color-1);
+    margin-top: 20px;
+}
+
+.quots {
+    font-weight: 400;
+    color: var(--text-color-1);
+    margin-top: 10px;
+}
+
+.account {
+    margin-left: 15px;
+}
+
+.signUpwithgoogleText {
+    color: var(--primary-colour, #223F64);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
