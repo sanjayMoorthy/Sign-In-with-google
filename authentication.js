@@ -71,7 +71,10 @@ signupButton.addEventListener('click', () => {
             // Email = email
             // photo = photoURL
             // alert(user.photoURL)
-            window.location = 'homePage.html'
+
+                if(user) {
+                  window.location = 'homePage.html'; //After successful login, user will be redirected to home.html
+                }
 
             // ...
         }).catch((error) => {

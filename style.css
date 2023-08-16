@@ -207,17 +207,19 @@ li.text {
     font-size: larger;
 }
 .text:hover{
-    color: #223F64;
+    color: #13db3e;
     cursor: pointer;
     text-shadow: 10px 10px 10px 10px #223F64;
 }
 .headerText{
     text-align: center;
     margin-top: 200px;
+    color: #F4F7FA;
     font-size: 50px;
 }
 .containerss{
     background: #223F64;
+    height: 636px;
 }
 
 button.logOut {
