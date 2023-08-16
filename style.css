@@ -171,3 +171,52 @@ a {
     font-weight: 500;
     line-height: normal;
 }
+
+
+
+
+
+
+
+
+img.logo {
+    height: 45px;
+    margin-top: 5px;
+}
+li{
+    list-style: none;
+}
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+}
+img.profile {
+    height: 40px;
+    margin-top: 5px;
+}
+.navPart{
+    display: flex;
+    gap: 50px;
+    margin-right: 50px;
+}
+
+li.text {
+    color: #FFF;
+    margin-top: 20px;
+    font-size: larger;
+}
+.text:hover{
+    color: #223F64;
+    cursor: pointer;
+    text-shadow: 10px 10px 10px 10px #223F64;
+}
+.headerText{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 50px;
+}
+.containerss{
+    background: #223F64;
+}
+

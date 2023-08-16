@@ -1,7 +1,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut, signInWithPopup,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -39,6 +39,9 @@ signupButton.addEventListener('click', () => {
 
             // The signed-in user info.
             const user = result.user;
+                if(user) {
+                  window.location = 'homePage.html'; //After successful login, user will be redirected to home.html
+                }
             // IdP data available using getAdditionalUserInfo(result)
             // ...
         }).catch((error) => {
@@ -89,3 +92,5 @@ signupButton.addEventListener('click', () => {
 //         // An error happened.
 //       });
 // })
+
+
