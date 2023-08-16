@@ -24,7 +24,7 @@ const provider = new GoogleAuthProvider();
 
 
 let signupButton = document.querySelector('.signupWithgoogle')
-// let logButton = document.querySelector('.logOut')
+let logButton = document.querySelector('.logOut')
 
 
 
@@ -97,10 +97,10 @@ signupButton.addEventListener('click', () => {
 // })
 
 
-// logButton.addEventListener('click',()=>{
-//        signOut(auth).then(() => {
-//         // Sign-out successful.
-//       }).catch((error) => {
-//         // An error happened.
-//       }); 
-// })
+logButton.addEventListener('click',()=>{
+       signOut(auth).then(() => {
+        // Sign-out successful.
+      }).catch((error) => {
+        // An error happened.
+      }); 
+})
