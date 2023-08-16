@@ -24,53 +24,26 @@ const provider = new GoogleAuthProvider();
 
 
 let signupButton = document.querySelector('.signupWithgoogle')
-let logButton = document.querySelector('.logOut')
+// let logButton = document.querySelector('.logOut')
 
 
 
 
 signupButton.addEventListener('click', () => {
-    signInWithRedirect(auth, provider);
+    // signInWithRedirect(auth, provider);
 
-    getRedirectResult(auth)
-        .then((result) => {
-            // This gives you a Google Access Token. You can use it to access Google APIs.
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
-
-            // The signed-in user info.
-            const user = result.user;
-                if(user) {
-                  window.location = 'homePage.html'; //After successful login, user will be redirected to home.html
-                }
-            // IdP data available using getAdditionalUserInfo(result)
-            // ...
-        }).catch((error) => {
-            // Handle Errors here.
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // The email of the user's account used.
-            const email = error.customData.email;
-            // The AuthCredential type that was used.
-            const credential = GoogleAuthProvider.credentialFromError(error);
-            // ...
-        });
-
-
-
-    // signInWithPopup(auth, provider)
+    // getRedirectResult(auth)
     //     .then((result) => {
-    //         // This gives you a Google Access Token. You can use it to access the Google API.
+    //         // This gives you a Google Access Token. You can use it to access Google APIs.
     //         const credential = GoogleAuthProvider.credentialFromResult(result);
     //         const token = credential.accessToken;
+
     //         // The signed-in user info.
     //         const user = result.user;
+    //             if(user) {
+    //               window.location = 'homePage.html'; //After successful login, user will be redirected to home.html
+    //             }
     //         // IdP data available using getAdditionalUserInfo(result)
-
-    //         // Name = displayName
-    //         // Email = email
-    //         // photo = photoURL
-    //         alert(user.displayName)
     //         // ...
     //     }).catch((error) => {
     //         // Handle Errors here.
@@ -84,6 +57,35 @@ signupButton.addEventListener('click', () => {
     //     });
 
 
+
+    signInWithPopup(auth, provider)
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            // IdP data available using getAdditionalUserInfo(result)
+
+            // Name = displayName
+            // Email = email
+            // photo = photoURL
+            // alert(user.photoURL)
+            window.location = 'homePage.html'
+
+            // ...
+        }).catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.customData.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // ...
+        });
+
+
 })
 
 // logButton.addEventListener('click',()=>{
@@ -95,10 +97,10 @@ signupButton.addEventListener('click', () => {
 // })
 
 
-logButton.addEventListener('click',()=>{
-       signOut(auth).then(() => {
-        // Sign-out successful.
-      }).catch((error) => {
-        // An error happened.
-      }); 
-})
+// logButton.addEventListener('click',()=>{
+//        signOut(auth).then(() => {
+//         // Sign-out successful.
+//       }).catch((error) => {
+//         // An error happened.
+//       }); 
+// })
